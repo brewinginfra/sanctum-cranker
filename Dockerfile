@@ -1,5 +1,5 @@
 # Stage 1: Build the Rust app
-FROM rust:1.75 as builder
+FROM rust:1.87 as builder
 
 RUN apt-get update && \
 	apt-get install -y pkg-config libudev-dev libssl-dev build-essential && \
