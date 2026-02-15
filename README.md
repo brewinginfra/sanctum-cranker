@@ -1,5 +1,10 @@
+<div align="center">
 
 # Sanctum Cranker
+
+</div>
+
+![cranker](src/assets/santum-cranker.png)
 
 A Rust-based automation tool for cranking [Sanctum Reserve](https://www.sanctum.so/) pools on the Solana blockchain using a CLI interface. It is designed to simplify and automate the process of sending cranking transactions using Solana RPC and a designated wallet.
 
@@ -9,7 +14,7 @@ A Rust-based automation tool for cranking [Sanctum Reserve](https://www.sanctum.
 
 - Rust (latest stable version)
 - Solana CLI (for local key management, optional)
-- Docker (optional, for containerized usage)
+- Docker (required, for containerized usage and production deployment)
 
 ---
 
@@ -42,11 +47,11 @@ PAYER_PRIVATE_KEY=''  # Your Solana wallet's private key (Base64 or JSON)
     ├── config.rs            # Loads and validates environment config
     ├── main.rs              # CLI entry point
     ├── routes               # (Planned) API routes
-    │   ├── cranker_route.rs
-    │   └── mod.rs
+    │   ├── cranker_route.rs
+    │   └── mod.rs
     ├── services             # Core logic for cranking
-    │   ├── cranker_service.rs
-    │   └── mod.rs
+    │   ├── cranker_service.rs
+    │   └── mod.rs
     ├── tx_utils.rs          # Utility functions for Solana transactions
     └── update.rs            # State update and refresh logic
 ```
@@ -94,6 +99,7 @@ docker run -e PORT=3000 \
 ## 🧭 Roadmap
 
 - [x] RESTful API server interface
+- [ ] Migrate sol transfer function
 - [ ] Retry logic and error reporting
 - [ ] Unit and integration tests
 
@@ -117,10 +123,6 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 Built and maintained by the Brew Labs team.
-
-```
-
-```
